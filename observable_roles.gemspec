@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
     "examples/example1.rb",
     "examples/example2.rb",
     "lib/observable_roles.rb",
+    "observable_roles.gemspec",
     "spec/observable_roles_spec.rb"
   ]
   s.homepage = "http://github.com/snitko/observable_roles"
