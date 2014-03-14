@@ -23,3 +23,4 @@ Jeweler::Tasks.new do |gem|
   gem.authors = ["Roman Snitko"]
   # dependencies defined in Gemfile
 end
+Jeweler::RubygemsDotOrgTasks.new
