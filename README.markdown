@@ -3,13 +3,12 @@ Observable Roles
 Thread safe implementation of the Observable pattern which also supports roles.
 
 
-Installation
-------------
+## Installation
 
     gem install observable_roles
 
-Usage
------
+
+## Usage
 
 Let's start with an example. First, create two classes:
 
@@ -84,8 +83,7 @@ This will result in only output:
 
 Both of these examples can be found in `/examples`.
 
-The following will be a short, but somewhat deeper explanation of the implementation
-----------------------------------------------------------------------------
+## The following will be a short, but somewhat deeper explanation of the implementation
 
 You have two objects: one is a Subscriber, another one is a Publisher.
 You subscribe a Subscriber to the Publisher events with a Publisher#subscribe.
@@ -107,8 +105,7 @@ Obviously, each role may have many different events and those events may come fr
 publishers who play the same role. This approach is more flexible than the standard Observer pattern,
 since it allows easy many-to-many relationship to be established.
 
-Thread safety
--------------
+## Thread safety
 
 Each new event that has a callback doesn't execute this callback immediately after said event is caught.
 Instead, it is added into a queue of events, which are then executed one by one. This ensures that each event callback execution doesn't interfere with the other.
