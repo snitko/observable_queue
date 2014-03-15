@@ -52,19 +52,19 @@ module ObservableRoles
     end
 
     def subscribe(s)
-      @observing_subscriber = [] unless @observing_subscriber
-      @observing_subscriber << s
+      @observing_subscribers = [] unless @observing_subscribers
+      @observing_subscribers << s
     end
 
     def unsubscribe(s)
-      unless @observing_subscriber.blank?
-        @observing_subscriber.delete(s)
+      unless @observing_subscribers.blank?
+        @observing_subscribers.delete(s)
       end
     end
 
     def publish_event(event_name, data={})
-      return unless @observing_subscriber
-      @observing_subscriber.each do |s|
+      return unless @observing_subscribers
+      @observing_subscribers.each do |s|
         if !block_given? || yield(s)
           s.capture_observable_event(role, event_name, data)
         end
