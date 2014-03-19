@@ -57,7 +57,7 @@ module ObservableRoles
     end
 
     def unsubscribe(s)
-      unless @observing_subscribers.blank?
+      unless @observing_subscribers.nil?
         @observing_subscribers.delete(s)
       end
     end
