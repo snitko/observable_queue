@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "observable_roles"
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Roman Snitko"]
-  s.date = "2014-03-14"
+  s.date = "2014-03-19"
   s.description = "Thread-safe Observable pattern implementation with a queue"
   s.email = "roman.snitko@gmail.com"
   s.extra_rdoc_files = [
